@@ -133,9 +133,8 @@ std::string get_multipool_entry(bool& final)
 
 	std::string pool;
 	if(xmrstak::params::inst().currency == "monero")
-		std::cout<<"- Pool address: e.g. pool.usxmrpool.com:3333"<<std::endl;
+		std::cout<<"- Pool address: e.g. pool.supportxmr.com:5555"<<std::endl;
 	else
-		std::cout<<"- Pool address: e.g. mine.aeon-pool.com:5555"<<std::endl;
 	std::cin >> pool;
 
 	std::string userName;
@@ -242,9 +241,7 @@ void do_guided_config()
 
 		userSetPool = false;
 		if(currency == "monero")
-			std::cout<<"- Pool address: e.g. pool.usxmrpool.com:3333"<<std::endl;
-		else
-			std::cout<<"- Pool address: e.g. mine.aeon-pool.com:5555"<<std::endl;
+			std::cout<<"- Pool address: e.g. pool.supportxmr.com:5555"<<std::endl;
 		std::cin >> pool;
 	}
 
@@ -633,7 +630,7 @@ int main(int argc, char *argv[])
 	if(::jconf::inst()->IsCurrencyMonero())
 		printer::inst()->print_msg(L0,"Start mining: MONERO");
 	else
-		printer::inst()->print_msg(L0,"Start mining: AEON");
+		printer::inst()->print_msg(L0,"Start mining: MONERO");
 
 	if(strlen(jconf::inst()->GetOutputFile()) != 0)
 		printer::inst()->open_logfile(jconf::inst()->GetOutputFile());
@@ -695,7 +692,7 @@ void do_benchmark()
 	for (uint32_t i = 0; i < pvThreads->size(); i++)
 	{
 		double fHps = pvThreads->at(i)->iHashCount;
-		fHps /= (pvThreads->at(i)->iTimestamp - iStartStamp) / 1000.0;
+		fHps /= (pvThreads->at(i)->iTimestamp - iStartStamp) / 10.0;
 
 		printer::inst()->print_msg(L0, "Thread %u: %.1f H/S", i, fHps);
 		fTotalHps += fHps;
