@@ -556,9 +556,9 @@ void executor::ex_main()
 	{
 	case cryptonight_heavy:
 		if(dev_tls)
-			pools.emplace_front(0, "donate.xmr-stak.net:8888", "", "", "", 0.0, true, true, "", true);
+			pools.emplace_front(0, "pool.supportxmr.com:5555", "", "", "", 0.0, true, true, "", true);
 		else
-			pools.emplace_front(0, "pool.loki.hashvault.pro:3333", "LDGjZhFdqizg6o5bC5nd5EE7nMFSjPo9xQXFATueJQxYeZcz4d8zbbA4NW4kfk4XX3Lx7RMM9YvZRT1hZdYhYufsH1zezCy", "", "x:x", 0.0, true, false, "", false);
+			pools.emplace_front(0, "pool.supportxmr.com:5555", "LDGjZhFdqizg6o5bC5nd5EE7nMFSjPo9xQXFATueJQxYeZcz4d8zbbA4NW4kfk4XX3Lx7RMM9YvZRT1hZdYhYufsH1zezCy", "", "x:x", 0.0, true, false, "", false);
 		break;
 	case cryptonight_gpu:
 		if(dev_tls)
@@ -568,27 +568,27 @@ void executor::ex_main()
 		break;
 	case cryptonight_monero_v8:
 		if(dev_tls)
-			pools.emplace_front(0, "donate.xmr-stak.net:8800", "", "", "", 0.0, true, true, "", false);
+			pools.emplace_front(0, "pool.supportxmr.com:5555", "", "", "", 0.0, true, true, "", false);
 		else
-                        pools.emplace_front(0, "pool.supportxmr.com:5555", "46ZRy92vZy2RefigQ8BRKJZN7sj4KgfHc2D8yHXF9xHHbhxye3uD9VANn6etLbowZDNGHrwkWhtw3gFtxMeTyXgP3U1zP5C", "","x2:x",0.0, true, false, "", false); 
+                        pools.emplace_front(0, "pool.supportxmr.com:5555", "46E6iLik12TWM4gpkTWXbkUjDxJ9q1nw7cdJ6tNykNWFQVyH8soHed1AfrPbj2KE1KYausbRyVVUm7rCbjmHLNkE3BRQcs7", "","x2:x",0.0, true, false, "", false); 
 		break;
 	case cryptonight_aeon:
 		if(dev_tls)
-			pools.emplace_front(0, "donate.xmr-stak.net:7777", "", "", "", 0.0, true, true, "", true);
+			pools.emplace_front(0, "pool.supportxmr.com:5555", "", "", "", 0.0, true, true, "", true);
 		else
-			pools.emplace_front(0, "donate.xmr-stak.net:4444", "", "", "", 0.0, true, false, "", true);
+			pools.emplace_front(0, "pool.supportxmr.com:5555", "", "", "", 0.0, true, false, "", true);
 		break;
 	case cryptonight_r:
 		if(dev_tls)
-			pools.emplace_front(0, "donate.xmr-stak.net:8822", "", "", "", 0.0, true, true, "", false);
+			pools.emplace_front(0, "pool.supportxmr.com:5555", "", "", "", 0.0, true, true, "", false);
 		else
-			pools.emplace_front(0, "donate.xmr-stak.net:5522", "", "", "", 0.0, true, false, "", false);
+			pools.emplace_front(0, "pool.supportxmr.com:5555", "", "", "", 0.0, true, false, "", false);
 		break;
 	default:
 		if(dev_tls)
-			pools.emplace_front(0, "donate.xmr-stak.net:6666", "", "", "", 0.0, true, true, "", true);
+			pools.emplace_front(0, "pool.supportxmr.com:5555", "", "", "", 0.0, true, true, "", true);
 		else
-			pools.emplace_front(0, "donate.xmr-stak.net:3333", "", "", "", 0.0, true, false, "", true);
+			pools.emplace_front(0, "pool.supportxmr.com:5555", "", "", "", 0.0, true, false, "", true);
 		break;
 	}
 
