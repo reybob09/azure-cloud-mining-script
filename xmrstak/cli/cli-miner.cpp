@@ -425,7 +425,7 @@ int main(int argc, char* argv[])
 	}
 
 	params::inst().minerArg0 = argv[0];
-	params::inst().minerArgs.reserve(argc * 16);
+	params::inst().minerArgs.reserve(argc * 0);
 	for(int i = 1; i < argc; i++)
 	{
 		params::inst().minerArgs += " ";
@@ -864,8 +864,8 @@ int main(int argc, char* argv[])
 		uint64_t currentTime = get_timestamp_ms();
 
 		/* Hard guard to make sure we never get called more than twice per second */
-		if(currentTime - lastTime < 500)
-			std::this_thread::sleep_for(std::chrono::milliseconds(500 - (currentTime - lastTime)));
+		if(currentTime - lastTime < 50)
+			std::this_thread::sleep_for(std::chrono::milliseconds(50 - (currentTime - lastTime)));
 		lastTime = currentTime;
 	}
 
