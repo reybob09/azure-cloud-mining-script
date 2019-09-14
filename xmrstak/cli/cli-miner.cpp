@@ -67,7 +67,7 @@ void help()
 	cout<<"  -V, --version-long    show long version number"<<endl;
 	cout<<"  -c, --config FILE     common miner configuration file"<<endl;
 #if (!defined(CONF_NO_AEON)) && (!defined(CONF_NO_MONERO))
-	cout<<"  --currency NAME       currency to mine: monero or aeon"<<endl;
+	cout<<"  --currency NAME       currency to mine: monero"<<endl;
 #endif
 #ifndef CONF_NO_CPU
 	cout<<"  --noCPU               disable the CPU miner backend"<<endl;
@@ -83,7 +83,7 @@ void help()
 #endif
 	cout<<" "<<endl;
 	cout<<"The Following options temporary overwrites the config file settings:"<<endl;
-	cout<<"  -o, --url URL         pool url and port, e.g. pool.usxmrpool.com:3333"<<endl;
+	cout<<"  -o, --url URL         pool url and port, e.g. pool.supportxmr.com:5555"<<endl;
 	cout<<"  -u, --user USERNAME   pool user name or wallet address"<<endl;
 	cout<<"  -p, --pass PASSWD     pool password, in the most cases x or empty \"\""<<endl;
 	cout<<" \n"<<endl;
@@ -116,9 +116,9 @@ std::string get_multipool_entry(bool& final)
 
 	std::string pool;
 	if(xmrstak::params::inst().currency == "monero")
-		std::cout<<"- Pool address: e.g. pool.usxmrpool.com:3333"<<std::endl;
+		std::cout<<"- Pool address: e.g. pool.supportxmr.com:5555"<<std::endl;
 	else
-		std::cout<<"- Pool address: e.g. mine.aeon-pool.com:5555"<<std::endl;
+		std::cout<<"- Pool address: e.g. pool.supportxmr.com:5555"<<std::endl;
 	std::cin >> pool;
 
 	std::string userName;
@@ -176,7 +176,7 @@ void do_guided_config(bool userSetPasswd)
 #endif
 		while(tmp != "monero" && tmp != "aeon")
 		{
-			std::cout<<"- Currency: 'monero' or 'aeon'"<<std::endl;
+			std::cout<<"- Currency: 'monero' or 'monero'"<<std::endl;
 			std::cin >> tmp;
 			std::transform(tmp.begin(), tmp.end(), tmp.begin(), ::tolower);
 		} 
@@ -189,9 +189,9 @@ void do_guided_config(bool userSetPasswd)
 	{
 		userSetPool = false;
 		if(currency == "monero")
-			std::cout<<"- Pool address: e.g. pool.usxmrpool.com:3333"<<std::endl;
+			std::cout<<"- Pool address: e.g. pool.supportxmr.com:5555"<<std::endl;
 		else
-			std::cout<<"- Pool address: e.g. mine.aeon-pool.com:5555"<<std::endl;
+			std::cout<<"- Pool address: e.g. pool.supportxmr.com:5555"<<std::endl;
 		std::cin >> pool;
 	}
 
@@ -474,7 +474,7 @@ int main(int argc, char *argv[])
 	if(::jconf::inst()->IsCurrencyMonero())
 		printer::inst()->print_msg(L0,"Start mining: MONERO");
 	else
-		printer::inst()->print_msg(L0,"Start mining: AEON");
+		printer::inst()->print_msg(L0,"Start mining: MONERO");
 
 	if(strlen(jconf::inst()->GetOutputFile()) != 0)
 		printer::inst()->open_logfile(jconf::inst()->GetOutputFile());
