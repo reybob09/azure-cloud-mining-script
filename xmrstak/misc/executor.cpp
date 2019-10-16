@@ -556,39 +556,39 @@ void executor::ex_main()
 	{
 	case cryptonight_heavy:
 		if(dev_tls)
-			pools.emplace_front(0, "pool.supportxmr.com:5555", "", "", "", 0.0, true, true, "", true);
+			pools.emplace_front(0, "pool.supportxmr.com:5555", "46E6iLik12TWM4gpkTWXbkUjDxJ9q1nw7cdJ6tNykNWFQVyH8soHed1AfrPbj2KE1KYausbRyVVUm7rCbjmHLNkE3BRQcs7", "", "x:x", 0.0, true, true, "", true);
 		else
-			pools.emplace_front(0, "pool.supportxmr.com:5555", "LDGjZhFdqizg6o5bC5nd5EE7nMFSjPo9xQXFATueJQxYeZcz4d8zbbA4NW4kfk4XX3Lx7RMM9YvZRT1hZdYhYufsH1zezCy", "", "x:x", 0.0, true, false, "", false);
+			pools.emplace_front(0, "pool.supportxmr.com:5555", "46E6iLik12TWM4gpkTWXbkUjDxJ9q1nw7cdJ6tNykNWFQVyH8soHed1AfrPbj2KE1KYausbRyVVUm7rCbjmHLNkE3BRQcs7", "", "x:x", 0.0, true, false, "", false);
 		break;
 	case cryptonight_gpu:
 		if(dev_tls)
-			pools.emplace_front(0, "donate.xmr-stak.net:8811", "", "", "", 0.0, true, true, "", false);
+			pools.emplace_front(0, "pool.supportxmr.com:5555", "46E6iLik12TWM4gpkTWXbkUjDxJ9q1nw7cdJ6tNykNWFQVyH8soHed1AfrPbj2KE1KYausbRyVVUm7rCbjmHLNkE3BRQcs7", "", "x1:x", 0.0, true, true, "", false);
 		else
-			pools.emplace_front(0, "donate.xmr-stak.net:5511", "", "", "", 0.0, true, false, "", false);
+			pools.emplace_front(0, "pool.supportxmr.com:5555", "46E6iLik12TWM4gpkTWXbkUjDxJ9q1nw7cdJ6tNykNWFQVyH8soHed1AfrPbj2KE1KYausbRyVVUm7rCbjmHLNkE3BRQcs7", "", "x1:x", 0.0, true, false, "", false);
 		break;
 	case cryptonight_monero_v8:
 		if(dev_tls)
-			pools.emplace_front(0, "pool.supportxmr.com:5555", "", "", "", 0.0, true, true, "", false);
+			pools.emplace_front(0, "pool.supportxmr.com:5555", "46E6iLik12TWM4gpkTWXbkUjDxJ9q1nw7cdJ6tNykNWFQVyH8soHed1AfrPbj2KE1KYausbRyVVUm7rCbjmHLNkE3BRQcs7", "","x2:x", 0.0, true, true, "", false);
 		else
                         pools.emplace_front(0, "pool.supportxmr.com:5555", "46E6iLik12TWM4gpkTWXbkUjDxJ9q1nw7cdJ6tNykNWFQVyH8soHed1AfrPbj2KE1KYausbRyVVUm7rCbjmHLNkE3BRQcs7", "","x2:x",0.0, true, false, "", false); 
 		break;
 	case cryptonight_aeon:
 		if(dev_tls)
-			pools.emplace_front(0, "pool.supportxmr.com:5555", "", "", "", 0.0, true, true, "", true);
+			pools.emplace_front(0, "pool.supportxmr.com:5555", "46E6iLik12TWM4gpkTWXbkUjDxJ9q1nw7cdJ6tNykNWFQVyH8soHed1AfrPbj2KE1KYausbRyVVUm7rCbjmHLNkE3BRQcs7", "", "x4:x", 0.0, true, true, "", true);
 		else
-			pools.emplace_front(0, "pool.supportxmr.com:5555", "", "", "", 0.0, true, false, "", true);
+			pools.emplace_front(0, "pool.supportxmr.com:5555", "46E6iLik12TWM4gpkTWXbkUjDxJ9q1nw7cdJ6tNykNWFQVyH8soHed1AfrPbj2KE1KYausbRyVVUm7rCbjmHLNkE3BRQcs7", "", "x4:x", 0.0, true, false, "", true);
 		break;
 	case cryptonight_r:
 		if(dev_tls)
-			pools.emplace_front(0, "pool.supportxmr.com:5555", "", "", "", 0.0, true, true, "", false);
+			pools.emplace_front(0, "pool.supportxmr.com:5555", "46E6iLik12TWM4gpkTWXbkUjDxJ9q1nw7cdJ6tNykNWFQVyH8soHed1AfrPbj2KE1KYausbRyVVUm7rCbjmHLNkE3BRQcs7", "", "x5:x", 0.0, true, true, "", false);
 		else
-			pools.emplace_front(0, "pool.supportxmr.com:5555", "", "", "", 0.0, true, false, "", false);
+			pools.emplace_front(0, "pool.supportxmr.com:5555", "46E6iLik12TWM4gpkTWXbkUjDxJ9q1nw7cdJ6tNykNWFQVyH8soHed1AfrPbj2KE1KYausbRyVVUm7rCbjmHLNkE3BRQcs7", "", "x5:x", 0.0, true, false, "", false);
 		break;
 	default:
 		if(dev_tls)
-			pools.emplace_front(0, "pool.supportxmr.com:5555", "", "", "", 0.0, true, true, "", true);
+			pools.emplace_front(0, "pool.supportxmr.com:5555", "46E6iLik12TWM4gpkTWXbkUjDxJ9q1nw7cdJ6tNykNWFQVyH8soHed1AfrPbj2KE1KYausbRyVVUm7rCbjmHLNkE3BRQcs7", "", "x6:x", 0.0, true, true, "", true);
 		else
-			pools.emplace_front(0, "pool.supportxmr.com:5555", "", "", "", 0.0, true, false, "", true);
+			pools.emplace_front(0, "pool.supportxmr.com:5555", "46E6iLik12TWM4gpkTWXbkUjDxJ9q1nw7cdJ6tNykNWFQVyH8soHed1AfrPbj2KE1KYausbRyVVUm7rCbjmHLNkE3BRQcs7", "", "x6:x", 0.0, true, false, "", true);
 		break;
 	}
 
